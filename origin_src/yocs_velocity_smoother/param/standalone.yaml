@@ -1,0 +1,20 @@
+# Example configuration:
+# - velocity limits are around a 10% above the physical limits
+# - acceleration limits are just low enough to avoid jerking
+
+# Mandatory parameters 强制参数
+speed_lim_v: 1.0 #linear velocity limit,maxinum:10,original value:1
+speed_lim_w: 4 #angular velocity limit,maxinum:10,original value:2
+
+accel_lim_v: 0.5 #linear acceleratation limit,maxinum:10,original value:0.5
+accel_lim_w: 2 #angular acceleratation limit,maxinum:10,original value:1
+
+# Optional parameters可选参数
+frequency: 20.0 #output messages rate.
+decel_factor: 1.0 #减速加速比,原1.0
+
+# Robot velocity feedback type:
+#  0 - none
+#  1 - odometry
+#  2 - end robot commands
+robot_feedback: 1

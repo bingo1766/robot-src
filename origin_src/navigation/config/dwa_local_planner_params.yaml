@@ -1,0 +1,40 @@
+#本地规划配置
+DWAPlannerROS:
+
+   max_vel_x: 0.2  #最大线速度
+   min_vel_x: 0.1
+   max_vel_y: 0.2  # zero for a differential drive robot
+   min_vel_y: 0.1
+   max_trans_vel: 0.2  #最大平移速度
+   min_trans_vel: 0.05
+   max_rot_vel: 1.0 #最大旋转速度
+   min_rot_vel: 0.6
+   escape_vel: -0.15  #机器人的逃离速度，即背向相反方向行走速度，单位是m/s
+   
+   acc_lim_x: 0.02  #在x方向上最大的线加速度，单位是m/s^2
+   acc_lim_y: 0.02 # zero for a differential drive robot
+   acc_lim_theta: 1.0  #最大角加速度，单位是rad/s^2
+   
+   yaw_goal_tolerance: 0.15 #接近目标方向（就弧度来说）允许的误差（rad），此值太小会造成机器人在目标附近震荡
+   xy_goal_tolerance: 0.15  # 15 cm 表示接近目标允许的误差（m），值不能小于地图的分辨率
+
+
+   path_distance_bias : 32.0
+   goal_distance_bias : 24.0
+   forward_point_distance : 0.325
+   occdist_scale : 0.2  #控制器尝试避开障碍物的权重
+   stop_time_buffer : 0.3
+   scaling_speed : 0.25
+   max_scaling_factor : 0.2
+
+   sim_time: 3.0  #规划器能看到未来多少秒
+   vx_samples: 20
+   vy_samples: 8 # zero for a differential drive robot
+   vtheta_samples: 40
+   
+   oscillation_reset_dist: 0.05
+   
+   publish_traj_pc : true
+   publish_cost_grid_pc : true
+   global_frame_id : /map
+ 

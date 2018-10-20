@@ -1,0 +1,11 @@
+<launch>
+
+
+   <include file="$(find descriptions)/launch/display.launch" />
+      
+   <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+    
+   <include file="$(find gmapping)/launch/slam_gmapping.launch" />
+   
+   
+</launch>
